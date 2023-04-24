@@ -1,10 +1,11 @@
 //Traer el lugar donde se mostrarán los numeros
 const display = document.querySelector("#display");
+console.log(display) // Me n muestra la etiqueta completa que contiene el id displey
 //Traer todos los buttons
-const buttons = document.querySelectorAll("button");
-
+const listaDeBotones = document.querySelectorAll("button");
+console.log(listaDeBotones) //Me trae la lista de botones 
 // Selecciona todos los botones de la calculadora y les asigna un evento "click"
-buttons.forEach((item) => {
+listaDeBotones.forEach((item) => {
     item.onclick = () => {
       // Si el botón presionado es el botón "clear", borra todo el contenido de la pantalla de la calculadora
       if (item.id == "clear") {
@@ -32,10 +33,13 @@ buttons.forEach((item) => {
   });
   
   // Selecciona el botón de alternancia de tema, la calculadora y el icono de alternancia de tema
-  const themeToggleBtn = document.querySelector(".theme-toggler");
-  const calculator = document.querySelector(".calculator");
-  const toggleIcon = document.querySelector(".toggler-icon");
   
+  const themeToggleBtn = document.querySelector(".theme-toggler");//boton para cambiar de thema
+  console.log(themeToggleBtn) // clase que se encarga de cambiar el theme 
+  const calculator = document.querySelector(".calculator"); 
+  console.log(calculator) // Trae el div que contiene la calculadora
+  const toggleIcon = document.querySelector(".toggler-icon");
+  console.log(toggleIcon) // Trae el icono dentro del circulo
   // Inicializa una variable "isDark" que indica si el tema actual es oscuro
   let isDark = true;
   
